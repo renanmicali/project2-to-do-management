@@ -11,7 +11,11 @@ export default function NewProject({onAdd}) {
         const enteredDescription = description.current.value;
         const enteredDueDate = dueDate.current.value;
 
-        //validation ...
+        if (enteredTitle.trim()==='' || 
+        enteredDescription.trim() === '' || 
+        enteredDueDate.trim()==='') {
+            //modal
+        }
 
         onAdd({
             title: enteredTitle,
